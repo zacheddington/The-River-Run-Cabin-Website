@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The River Run Cabin</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="site-title">The River Run Cabin</div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="area.html">Area</a>
+        <a href="qa.html">Q&amp;A</a>
+        <a href="contact.html">Contact</a>
+        <a href="book.html" class="book-btn">Book</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <img 
+        src="images/Cabin/01-Sign.jpg" 
+        alt="Cabin Sign" 
+        class="hero-img slide-in-hero"
+        loading="lazy"
+        srcset="images/Cabin/01-Sign-480.jpg 480w, images/Cabin/01-Sign-800.jpg 800w, images/Cabin/01-Sign.jpg 1200w"
+        sizes="(max-width: 600px) 90vw, (max-width: 1200px) 70vw, 1200px"
+      >
+    </section>
+    <section class="property-description">
+      <h2>About the Property</h2>
+      <p>
+        Nestled right on the banks of Henry's Fork of the Snake River, The River Run Cabin offers a true angler's paradise and a peaceful retreat for nature lovers. Step out your door to immediate river access—perfect for fishing, floating, or simply soaking in the tranquil views. The property is just a minute from the main river take-out, making it effortless  to enjoy a day on the water. After your adventures, store your fishing gear and unwind by the cozy fireplace or fire up the grill for a riverside meal. Whether you're seeking world-class fly fishing, a family getaway, or a relaxing escape surrounded by the beauty of Idaho, The River Run Cabin is your home on the river.
+      </p>
+    </section>
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <!-- Gallery images will be loaded here by JS -->
+      </div>
+    </section>
+  </main>
+  <script>
+    // Force scroll to top on reload
+    window.addEventListener('beforeunload', function() {
+      window.scrollTo(0, 0);
+    });
+    // Animate hero image on load
+    window.addEventListener('DOMContentLoaded', function() {
+      window.scrollTo(0, 0);
+      const heroImg = document.querySelector('.slide-in-hero');
+      if (heroImg) {
+        heroImg.classList.add('slide-in-hero-animate');
+      }
+    });
+  </script>
+  <script src="gallery.js"></script>
+</body>
+</html>
