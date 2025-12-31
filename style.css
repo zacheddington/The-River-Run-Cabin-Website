@@ -1,6 +1,7 @@
 /* Gallery Modal Sweep Animations */
 .gallery-modal-img {
-  transition: transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sweep-in-left {
   transform: translateX(-100%);
@@ -23,20 +24,44 @@
   animation: sweepOutRight 0.5s forwards;
 }
 @keyframes sweepInLeft {
-  from { transform: translateX(-100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 @keyframes sweepInRight {
-  from { transform: translateX(100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 @keyframes sweepOutLeft {
-  from { transform: translateX(0); opacity: 1; }
-  to { transform: translateX(-100%); opacity: 0; }
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }
 @keyframes sweepOutRight {
-  from { transform: translateX(0); opacity: 1; }
-  to { transform: translateX(100%); opacity: 0; }
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
 /* Fade-in effect for gallery images */
 /* Rental Table Styles */
@@ -47,9 +72,10 @@
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(34,51,59,0.08);
+  box-shadow: 0 2px 10px rgba(34, 51, 59, 0.08);
 }
-.rental-table th, .rental-table td {
+.rental-table th,
+.rental-table td {
   padding: 0.7em 1em;
   text-align: left;
   border-bottom: 1px solid #e0e0e0;
@@ -166,7 +192,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(34,51,59,0.85);
+  background: rgba(34, 51, 59, 0.85);
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -179,7 +205,7 @@
   max-width: 90vw;
   max-height: 80vh;
   border-radius: 10px;
-  box-shadow: 0 4px 32px rgba(34,51,59,0.25);
+  box-shadow: 0 4px 32px rgba(34, 51, 59, 0.25);
   background: #fff;
 }
 .gallery-modal-caption {
@@ -187,7 +213,7 @@
   margin-top: 1.2em;
   font-size: 1.1em;
   text-align: center;
-  text-shadow: 0 2px 8px rgba(34,51,59,0.5);
+  text-shadow: 0 2px 8px rgba(34, 51, 59, 0.5);
 }
 .gallery-modal-close {
   position: absolute;
@@ -198,7 +224,7 @@
   cursor: pointer;
   font-weight: 700;
   z-index: 10;
-  text-shadow: 0 2px 8px rgba(34,51,59,0.5);
+  text-shadow: 0 2px 8px rgba(34, 51, 59, 0.5);
 }
 .gallery-modal-arrow {
   position: absolute;
@@ -210,7 +236,7 @@
   user-select: none;
   z-index: 10;
   padding: 0 0.3em;
-  text-shadow: 0 2px 8px rgba(34,51,59,0.5);
+  text-shadow: 0 2px 8px rgba(34, 51, 59, 0.5);
   transition: color 0.2s;
 }
 .gallery-modal-arrow-left {
@@ -219,7 +245,8 @@
 .gallery-modal-arrow-right {
   right: 1.5em;
 }
-.gallery-modal-arrow:hover, .gallery-modal-close:hover {
+.gallery-modal-arrow:hover,
+.gallery-modal-close:hover {
   color: #e9c46a;
 }
 /* Fly Shop table for Q&A alignment */
@@ -294,10 +321,10 @@
 .airport-table td:last-child {
   color: #4f5d4e;
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 body {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   margin: 0;
   background: #f6f5f0;
   color: #22333b;
@@ -313,7 +340,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  background: rgba(34,51,59,0.45);
+  background: rgba(34, 51, 59, 0.45);
 }
 .modal-content {
   background: #fff;
@@ -321,7 +348,7 @@ body {
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   border-radius: 12px;
   max-width: 420px;
-  box-shadow: 0 4px 24px rgba(34,51,59,0.18);
+  box-shadow: 0 4px 24px rgba(34, 51, 59, 0.18);
   position: relative;
   text-align: left;
 }
@@ -355,7 +382,7 @@ header {
   top: 0;
   z-index: 100;
   background: #2d3a2e;
-  box-shadow: 0 2px 8px rgba(34,51,59,0.08);
+  box-shadow: 0 2px 8px rgba(34, 51, 59, 0.08);
 }
 
 .navbar {
@@ -366,7 +393,7 @@ header {
   margin: 0 auto;
   padding: 0.7rem 1.5rem;
 }
- .site-title {
+.site-title {
   font-size: 1.7rem;
   font-weight: 700;
   color: #fff;
@@ -384,7 +411,8 @@ nav a {
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
 }
-nav a:hover, .book-btn {
+nav a:hover,
+.book-btn {
   background: #4f5d4e;
   color: #e9c46a;
 }
@@ -422,10 +450,10 @@ nav a:hover, .book-btn {
     width: 220px;
     gap: 0;
     border-radius: 0 0 0 12px;
-    box-shadow: -2px 0 16px rgba(34,51,59,0.18);
+    box-shadow: -2px 0 16px rgba(34, 51, 59, 0.18);
     display: flex !important;
     padding-top: 70px;
-    transition: transform 0.55s cubic-bezier(.77,0,.18,1), opacity 0.3s;
+    transition: transform 0.55s cubic-bezier(0.77, 0, 0.18, 1), opacity 0.3s;
     transform: translateX(100%);
     z-index: 2001;
     pointer-events: none;
@@ -450,12 +478,12 @@ nav a:hover, .book-btn {
     left: unset;
     transform: none;
     z-index: 2100;
-        top: 50%;
-        bottom: auto;
-        right: 16px;
-        left: unset;
-        transform: translateY(-50%);
-        height: 36px;
+    top: 50%;
+    bottom: auto;
+    right: 16px;
+    left: unset;
+    transform: translateY(-50%);
+    height: 36px;
   }
   .navbar {
     position: relative;
@@ -488,7 +516,8 @@ nav a:hover, .book-btn {
   display: block;
   opacity: 0;
   transform: translateY(60px);
-  transition: opacity 2.2s cubic-bezier(.4,2,.6,1), transform 4s cubic-bezier(.4,2,.6,1);
+  transition: opacity 2.2s cubic-bezier(0.4, 2, 0.6, 1),
+    transform 4s cubic-bezier(0.4, 2, 0.6, 1);
 }
 .slide-in-hero-animate {
   opacity: 1 !important;
@@ -508,13 +537,15 @@ nav a:hover, .book-btn {
 .gallery-grid img {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 1px 6px rgba(34,51,59,0.08);
+  box-shadow: 0 1px 6px rgba(34, 51, 59, 0.08);
   object-fit: cover;
   height: 180px;
-  transition: transform 0.18s cubic-bezier(.4,2,.6,1), filter 0.18s cubic-bezier(.4,2,.6,1);
+  transition: transform 0.18s cubic-bezier(0.4, 2, 0.6, 1),
+    filter 0.18s cubic-bezier(0.4, 2, 0.6, 1);
   cursor: pointer;
 }
-.gallery-grid img:hover, .gallery-grid img:focus {
+.gallery-grid img:hover,
+.gallery-grid img:focus {
   filter: brightness(0.7);
   transform: scale(0.96);
 }
@@ -534,7 +565,7 @@ nav a:hover, .book-btn {
 .attraction-card {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(34,51,59,0.08);
+  box-shadow: 0 2px 10px rgba(34, 51, 59, 0.08);
   padding: 1.2rem 1rem 1.5rem 1rem;
   display: flex;
   flex-direction: column;
@@ -586,7 +617,7 @@ nav a:hover, .book-btn {
 .qa-item {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(34,51,59,0.08);
+  box-shadow: 0 2px 10px rgba(34, 51, 59, 0.08);
   padding: 1.2rem 1rem 1.2rem 1rem;
   margin-bottom: 1.2rem;
 }
@@ -605,7 +636,7 @@ nav a:hover, .book-btn {
 }
 .map-section iframe {
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(34,51,59,0.08);
+  box-shadow: 0 2px 10px rgba(34, 51, 59, 0.08);
 }
 
 /* Book Page */
@@ -615,7 +646,7 @@ nav a:hover, .book-btn {
   padding: 2rem 1.5rem;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(34,51,59,0.08);
+  box-shadow: 0 2px 10px rgba(34, 51, 59, 0.08);
   text-align: center;
 }
 .book-link {
@@ -642,7 +673,7 @@ nav a:hover, .book-btn {
   padding: 2rem 1.5rem;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(34,51,59,0.08);
+  box-shadow: 0 2px 10px rgba(34, 51, 59, 0.08);
   text-align: center;
 }
 .contact-section a {

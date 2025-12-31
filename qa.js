@@ -1,10 +1,10 @@
 const qaList = [
   {
-    q: 'Is there an experienced river guide you would recommend?',
-    a: 'We recommend visiting <a href="https://threeriversranch.com/" target="_blank" rel="noopener">Three Rivers Ranch</a> for guide information.'
+    q: "Is there an experienced river guide you would recommend?",
+    a: 'We recommend visiting <a href="https://threeriversranch.com/" target="_blank" rel="noopener">Three Rivers Ranch</a> for guide information.',
   },
   {
-    q: 'Where can I rent boats, tubes, or motorsports equipment?',
+    q: "Where can I rent boats, tubes, or motorsports equipment?",
     a: `
       <table class="rental-table">
         <tr><td>Float Boat Rentals</td><td><a href="https://millerdriftboats.com/" target="_blank" rel="noopener">Miller Drift Boats</a></td><td>Ashton</td></tr>
@@ -13,10 +13,10 @@ const qaList = [
         <tr><td></td><td><a href="https://islandparkadventures.com/" target="_blank" rel="noopener">Island Park Adventures</a></td><td>Island Park</td></tr>
       </table>
       <div style="font-size:0.95em;margin-top:0.5em;">Note: Machines are not provided with your cabin rental. Rentals are available from the providers above.</div>
-    `
+    `,
   },
   {
-    q: 'Where are the nearest airports?',
+    q: "Where are the nearest airports?",
     a: `<table class="airport-table">
       <tr><td>Idaho Falls (IDA)</td><td>54 miles</td><td>1h</td></tr>
       <tr><td>Pocatello (PIC)</td><td>111 miles</td><td>1h 40m</td></tr>
@@ -24,10 +24,10 @@ const qaList = [
       <tr><td>Bozeman, MT (BZN)</td><td>143 miles</td><td>2h 40m</td></tr>
       <tr><td>Boise (BOI)</td><td>334 miles</td><td>4h 40m</td></tr>
       <tr><td>Yellowstone Airport (WYS)</td><td>55 miles</td><td>1h (Summer Only!)</td></tr>
-    </table>`
+    </table>`,
   },
   {
-    q: 'Local Restaurants?',
+    q: "Local Restaurants?",
     a: `
       <table class="restaurant-table">
         <tr><td>Ashton (4 miles)</td><td><a href="https://ashtonidaho.com/membership/dining/big-juds" target="_blank" rel="noopener">Big Jud's</a></td></tr>
@@ -45,10 +45,10 @@ const qaList = [
         <tr><td></td><td><a href="https://www.lakesidelodgeandresort.com/restaurant" target="_blank" rel="noopener">Lakeside Lodge Restaurant and Bar</a></td></tr>
         <tr><td></td><td><a href="https://www.pondslodge.com/menus/" target="_blank" rel="noopener">Pond's Lodge Restaurant</a></td></tr>
       </table>
-    `
+    `,
   },
   {
-    q: 'Fly Shops?',
+    q: "Fly Shops?",
     a: `
       <table class="flyshop-table">
         <tr><td>TRR Outfitters Fly Shop</td><td>Ashton</td><td>208-652-3008</td></tr>
@@ -56,17 +56,20 @@ const qaList = [
         <tr><td>Trout Hunter</td><td>Island Park</td><td>208-558-8006</td></tr>
         <tr><td>Henry's Fork Anglers</td><td>Island Park</td><td>208-558-7525</td></tr>
       </table>
-    `
-  }
+    `,
+  },
 ];
 
-const container = document.querySelector('.qa-list');
-qaList.forEach(item => {
-  const div = document.createElement('div');
-  div.className = 'qa-item';
+const container = document.querySelector(".qa-list");
+qaList.forEach((item) => {
+  const div = document.createElement("div");
+  div.className = "qa-item";
   let answerHtml = item.a;
   // Wrap tables in a scrollable div for mobile
-  answerHtml = answerHtml.replace(/(<table[^>]*>.*?<\/table>)/gs, '<div class="table-scroll">$1</div>');
+  answerHtml = answerHtml.replace(
+    /(<table[^>]*>.*?<\/table>)/gs,
+    '<div class="table-scroll">$1</div>'
+  );
   div.innerHTML = `<h2>${item.q}</h2><p>${answerHtml}</p>`;
   container.appendChild(div);
 });
