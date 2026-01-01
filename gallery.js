@@ -25,6 +25,14 @@
     "ATV.jpg",
   ];
 
+  // Preload all gallery images before rendering
+  const preloadImages = [];
+  images.forEach((filename) => {
+    const img = new window.Image();
+    img.src = `images/Cabin/${filename}`;
+    preloadImages.push(img);
+  });
+
   // Custom titles for each image (same order as images array)
   const titles = [
     "Cabin Exterior",
