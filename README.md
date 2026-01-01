@@ -7,12 +7,14 @@ A modern, responsive website for The River Run Cabin — a riverside vacation re
 ## Features
 
 ### 🏠 Pages
+
 - **Home** — Hero image, property description, and interactive photo gallery
 - **Area** — Local attractions with expandable descriptions and links
 - **Q&A** — Frequently asked questions with tables for rentals, restaurants, airports, and fly shops
 - **Contact** — Contact information with clickable phone/email links
 
 ### 🎨 Design
+
 - Mobile-first, fully responsive layout
 - Dark mode support via `prefers-color-scheme`
 - Smooth animations with `prefers-reduced-motion` support
@@ -20,6 +22,7 @@ A modern, responsive website for The River Run Cabin — a riverside vacation re
 - Print-optimized stylesheet
 
 ### ♿ Accessibility
+
 - Skip to main content link
 - ARIA labels and roles throughout
 - Keyboard navigation support
@@ -28,6 +31,7 @@ A modern, responsive website for The River Run Cabin — a riverside vacation re
 - Screen reader friendly
 
 ### 🚀 Performance
+
 - DNS prefetching for external domains
 - Font preconnect for Google Fonts
 - Lazy loading for gallery images
@@ -35,6 +39,7 @@ A modern, responsive website for The River Run Cabin — a riverside vacation re
 - Minimal, optimized CSS and JavaScript
 
 ### 🔍 SEO
+
 - Structured data (JSON-LD) for rich search results
 - Open Graph meta tags for social sharing
 - Twitter Card support
@@ -43,6 +48,7 @@ A modern, responsive website for The River Run Cabin — a riverside vacation re
 - robots.txt
 
 ### 📱 Mobile Enhancements
+
 - Animated hamburger menu (transforms to X)
 - Touch-friendly tap targets
 - Overlay to close menu when tapping outside
@@ -51,6 +57,7 @@ A modern, responsive website for The River Run Cabin — a riverside vacation re
 - Apple touch icon for iOS home screen
 
 ### 🔒 Privacy
+
 - No cookies
 - No analytics or trackers
 - No third-party scripts (except Google Fonts and Maps)
@@ -93,21 +100,24 @@ A modern, responsive website for The River Run Cabin — a riverside vacation re
 ## Development
 
 ### Prerequisites
+
 - Any modern web browser
 - A local web server (optional, for testing)
 
 ### Quick Start
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/zacheddington/The-River-Run-Cabin-Website.git
    ```
 
 2. Open `index.html` in your browser, or serve locally:
+
    ```bash
    # Using Python
    python -m http.server 8000
-   
+
    # Using Node.js
    npx serve
    ```
