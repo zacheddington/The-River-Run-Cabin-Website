@@ -149,6 +149,9 @@
     }, ANIMATION_DURATION);
   }
 
+  /** @type {number} Scroll position when modal opened */
+  let modalScrollPosition = 0;
+
   /**
    * Open the modal at a specific image index
    * @param {number} index - Image index to display
@@ -159,7 +162,15 @@
     modalImg.alt = titles[index] ?? "";
     modalCaption.textContent = titles[index] ?? "";
     modal.style.display = "flex";
+    
+    // Lock body scroll (same approach as nav menu)
+    modalScrollPosition = window.scrollY;
     document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${modalScrollPosition}px`;
+    document.body.style.width = "100%";
+    document.body.style.touchAction = "none";
+    
     closeBtn.focus(); // Focus for accessibility
   }
 
@@ -168,7 +179,14 @@
    */
   function closeModal() {
     modal.style.display = "none";
+    
+    // Restore body scroll
     document.body.style.overflow = "";
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
+    document.body.style.touchAction = "";
+    window.scrollTo(0, modalScrollPosition);
   }
 
   /**
