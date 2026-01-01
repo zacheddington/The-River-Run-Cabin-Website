@@ -162,7 +162,7 @@
     modalImg.alt = titles[index] ?? "";
     modalCaption.textContent = titles[index] ?? "";
     modal.style.display = "flex";
-    
+
     // Lock body scroll (same approach as nav menu)
     modalScrollPosition = window.scrollY;
     document.body.style.overflow = "hidden";
@@ -170,7 +170,7 @@
     document.body.style.top = `-${modalScrollPosition}px`;
     document.body.style.width = "100%";
     document.body.style.touchAction = "none";
-    
+
     closeBtn.focus(); // Focus for accessibility
   }
 
@@ -179,7 +179,7 @@
    */
   function closeModal() {
     modal.style.display = "none";
-    
+
     // Restore body scroll
     document.body.style.overflow = "";
     document.body.style.position = "";
