@@ -3,20 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore attractions near The River Run Cabin — Yellowstone, Grand Teton, Mesa Falls, Harriman State Park, and more. Plan your Idaho adventure." />
     <title>Area - The River Run Cabin</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <div class="navbar">
         <div class="site-title">The River Run Cabin</div>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <label for="nav-toggle" class="nav-toggle-label">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu" role="button" tabindex="0">
           <span></span>
           <span></span>
           <span></span>
         </label>
-        <nav>
+        <nav id="main-nav" aria-label="Main navigation">
           <a href="index.html">Home</a>
           <a href="area.html">Area</a>
           <a href="qa.html">Q&amp;A</a>
@@ -31,7 +33,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main id="main-content">
       <section class="area-attractions">
         <h1>Explore the Area</h1>
         <div class="attractions-list">
@@ -39,6 +41,14 @@
         </div>
       </section>
     </main>
-    <script src="area.js"></script>
+    <footer>
+      <p>&copy; <span id="year"></span> The River Run Cabin. All rights reserved.</p>
+      <p>
+        <a href="mailto:theriverruncabin@gmail.com">theriverruncabin@gmail.com</a> |
+        <a href="tel:+12086563650">208-656-3650</a>
+      </p>
+      <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </footer>
+    <script src="assets/js/area.js"></script>
   </body>
 </html>
