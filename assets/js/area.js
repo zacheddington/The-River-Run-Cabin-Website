@@ -141,6 +141,7 @@
     modalTitle.textContent = attractions[index].title;
     modalDesc.textContent = attractions[index].description;
     modal.style.display = "block";
+    document.body.style.overflow = "hidden";
     modalClose.focus();
   }
 
@@ -149,6 +150,7 @@
    */
   function closeModal() {
     modal.style.display = "none";
+    document.body.style.overflow = "";
   }
 
   // Event listeners for modal
@@ -158,9 +160,16 @@
     if (e.target === modal) closeModal();
   });
 
+  // Focus trap - keep focus on close button when modal is open
   document.addEventListener("keydown", (e) => {
-    if (modal.style.display === "block" && e.key === "Escape") {
+    if (modal.style.display !== "block") return;
+
+    if (e.key === "Escape") {
       closeModal();
+    } else if (e.key === "Tab") {
+      // Single focusable element, prevent Tab from leaving
+      e.preventDefault();
+      modalClose.focus();
     }
   });
 

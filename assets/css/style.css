@@ -153,6 +153,12 @@ header {
   font-weight: 700;
   color: var(--color-nav-text);
   letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: var(--color-nav-text);
+  opacity: 0.85;
 }
 
 nav {
@@ -172,9 +178,11 @@ nav a {
 nav a[aria-current="page"] {
   background: var(--color-accent);
   color: var(--color-gold);
+  pointer-events: none;
+  cursor: default;
 }
 
-nav a:hover {
+nav a:not([aria-current="page"]):hover {
   background: var(--color-accent);
   color: var(--color-gold);
 }
@@ -215,6 +223,19 @@ nav a:focus-visible {
   border-radius: 2px;
   transition: transform var(--transition-smooth),
     opacity var(--transition-smooth);
+}
+
+/* Hamburger to X animation when menu is open */
+.nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Nav Overlay - closes menu when clicking outside */
@@ -889,5 +910,83 @@ footer a:hover {
   .gallery,
   .area-attractions {
     max-width: 1200px;
+  }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+@media print {
+  /* Reset colors for printing */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Hide non-essential elements */
+  header,
+  footer,
+  .nav-toggle-label,
+  .nav-overlay,
+  .gallery-modal,
+  .modal,
+  .skip-link,
+  .book-btn {
+    display: none !important;
+  }
+
+  /* Ensure content is readable */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Show URLs for links */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+
+  a[href^="tel:"]::after,
+  a[href^="mailto:"]::after {
+    content: "";
+  }
+
+  /* Improve image handling */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Prevent page breaks inside elements */
+  .property-description,
+  .qa-item,
+  .attraction-card,
+  .contact-section {
+    page-break-inside: avoid;
+  }
+
+  /* Add page breaks before major sections */
+  .gallery,
+  .area-attractions,
+  .qa-section {
+    page-break-before: auto;
+  }
+
+  /* Ensure tables fit on page */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
   }
 }

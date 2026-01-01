@@ -1,0 +1,8 @@
+# Robots.txt for The River Run Cabin
+# https://theriverruncabin.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://theriverruncabin.com/sitemap.xml

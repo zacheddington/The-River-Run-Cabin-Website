@@ -198,6 +198,34 @@
     if (e.target === modal) closeModal();
   });
 
+  // Focus trap - keep focus within modal when open
+  const focusableElements = [closeBtn, leftArrow, rightArrow];
+
+  /**
+   * Handle tab key to trap focus within modal
+   * @param {KeyboardEvent} e - Keyboard event
+   */
+  function handleTabKey(e) {
+    if (e.key !== "Tab") return;
+
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (e.shiftKey) {
+      // Shift + Tab: if on first element, go to last
+      if (document.activeElement === firstElement) {
+        e.preventDefault();
+        lastElement.focus();
+      }
+    } else {
+      // Tab: if on last element, go to first
+      if (document.activeElement === lastElement) {
+        e.preventDefault();
+        firstElement.focus();
+      }
+    }
+  }
+
   document.addEventListener("keydown", (e) => {
     if (modal.style.display !== "flex") return;
 
@@ -210,6 +238,9 @@
         break;
       case "Escape":
         closeModal();
+        break;
+      case "Tab":
+        handleTabKey(e);
         break;
     }
   });

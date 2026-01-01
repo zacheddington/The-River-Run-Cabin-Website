@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2d3a2e" />
     <meta
       name="description"
       content="The River Run Cabin — A peaceful riverside retreat on Henry's Fork of the Snake River in Idaho. World-class fly fishing, stunning views, and easy access to Yellowstone."
@@ -22,20 +23,56 @@
     <meta name="twitter:card" content="summary_large_image" />
     <title>The River Run Cabin</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/images/Cabin/01-Sign.jpg" />
     <link rel="canonical" href="https://theriverruncabin.com/" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.kabino.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Structured Data for Rich Search Results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "The River Run Cabin",
+        "description": "A peaceful riverside retreat on Henry's Fork of the Snake River in Idaho. World-class fly fishing, stunning views, and easy access to Yellowstone.",
+        "url": "https://theriverruncabin.com",
+        "image": "https://theriverruncabin.com/assets/images/Cabin/01-Sign.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3617 Fishermans Drive",
+          "addressLocality": "Ashton",
+          "addressRegion": "ID",
+          "postalCode": "83420",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 44.0716,
+          "longitude": -111.4483
+        },
+        "telephone": "+1-208-656-3650",
+        "email": "theriverruncabin@gmail.com",
+        "priceRange": "$$",
+        "amenityFeature": [
+          {"@type": "LocationFeatureSpecification", "name": "River Access"},
+          {"@type": "LocationFeatureSpecification", "name": "Fly Fishing"},
+          {"@type": "LocationFeatureSpecification", "name": "Fireplace"},
+          {"@type": "LocationFeatureSpecification", "name": "Kitchen"},
+          {"@type": "LocationFeatureSpecification", "name": "Laundry"}
+        ]
+      }
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <div class="navbar">
-        <div class="site-title">The River Run Cabin</div>
+        <a href="index.html" class="site-title">The River Run Cabin</a>
         <input
           type="checkbox"
           id="nav-toggle"
