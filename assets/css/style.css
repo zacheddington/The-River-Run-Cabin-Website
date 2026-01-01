@@ -258,6 +258,9 @@ nav a:focus-visible {
 /* Prevent body scroll when nav is open */
 body.nav-open {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
+  touch-action: none;
 }
 
 /* ==========================================================================

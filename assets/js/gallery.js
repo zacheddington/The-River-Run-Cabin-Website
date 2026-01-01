@@ -247,35 +247,39 @@
 
   // Touch swipe support for mobile
   let touchStartX = 0;
+  let touchStartY = 0;
   let touchEndX = 0;
+  let touchEndY = 0;
   const SWIPE_THRESHOLD = 50; // Minimum distance for a swipe
 
-  modal.addEventListener(
-    "touchstart",
-    (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    },
-    { passive: true }
-  );
+  modal.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  });
 
-  modal.addEventListener(
-    "touchend",
-    (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    },
-    { passive: true }
-  );
+  modal.addEventListener("touchmove", (e) => {
+    // Prevent scrolling while swiping in the modal
+    e.preventDefault();
+  });
+
+  modal.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleSwipe();
+  });
 
   /**
    * Handle swipe gesture to navigate images
    */
   function handleSwipe() {
-    const swipeDistance = touchEndX - touchStartX;
+    const swipeDistanceX = touchEndX - touchStartX;
+    const swipeDistanceY = touchEndY - touchStartY;
 
-    if (Math.abs(swipeDistance) < SWIPE_THRESHOLD) return;
+    // Only handle horizontal swipes (ignore vertical)
+    if (Math.abs(swipeDistanceX) < SWIPE_THRESHOLD) return;
+    if (Math.abs(swipeDistanceY) > Math.abs(swipeDistanceX)) return;
 
-    if (swipeDistance > 0) {
+    if (swipeDistanceX > 0) {
       // Swiped right - show previous
       showPrev();
     } else {
