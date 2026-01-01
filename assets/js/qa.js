@@ -1,7 +1,7 @@
 /**
  * Q&A Module
  * Renders frequently asked questions with answers into the page.
- * 
+ *
  * @author The River Run Cabin
  * @version 1.0.0
  */
@@ -65,10 +65,10 @@
       q: "Fly Shops?",
       a: `
         <table class="flyshop-table">
-          <tr><td>TRR Outfitters Fly Shop</td><td>Ashton</td><td>208-652-3008</td></tr>
-          <tr><td>TRR Outfitters Fly Shop</td><td>Island Park</td><td>208-558-7501</td></tr>
-          <tr><td>Trout Hunter</td><td>Island Park</td><td>208-558-8006</td></tr>
-          <tr><td>Henry's Fork Anglers</td><td>Island Park</td><td>208-558-7525</td></tr>
+          <tr><td>TRR Outfitters Fly Shop</td><td>Ashton</td><td><a href="tel:+12086523008">208-652-3008</a></td></tr>
+          <tr><td>TRR Outfitters Fly Shop</td><td>Island Park</td><td><a href="tel:+12085587501">208-558-7501</a></td></tr>
+          <tr><td>Trout Hunter</td><td>Island Park</td><td><a href="tel:+12085588006">208-558-8006</a></td></tr>
+          <tr><td>Henry's Fork Anglers</td><td>Island Park</td><td><a href="tel:+12085587525">208-558-7525</a></td></tr>
         </table>
       `,
     },

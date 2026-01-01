@@ -1,12 +1,26 @@
 /**
  * Gallery Module
  * Dynamically loads cabin images into the gallery and provides modal navigation.
- * 
+ * Also handles hero image animation on page load.
+ *
  * @author The River Run Cabin
  * @version 1.0.0
  */
 (function () {
   "use strict";
+
+  // Hero image animation
+  const heroImg = document.querySelector(".slide-in-hero");
+  if (heroImg) {
+    // Force scroll to top on page load
+    window.scrollTo(0, 0);
+    heroImg.classList.add("slide-in-hero-animate");
+  }
+
+  // Force scroll to top before page unload (for browser back/forward)
+  window.addEventListener("beforeunload", function () {
+    window.scrollTo(0, 0);
+  });
 
   const galleryGrid = document.querySelector(".gallery-grid");
   if (!galleryGrid) return;
@@ -110,10 +124,16 @@
    * @param {number} nextIndex - Index of the next image to show
    */
   function animateModalImg(direction, nextIndex) {
-    const outClass = direction === "left" ? "sweep-out-right" : "sweep-out-left";
+    const outClass =
+      direction === "left" ? "sweep-out-right" : "sweep-out-left";
     const inClass = direction === "left" ? "sweep-in-left" : "sweep-in-right";
 
-    modalImg.classList.remove("sweep-in-left", "sweep-in-right", "sweep-out-left", "sweep-out-right");
+    modalImg.classList.remove(
+      "sweep-in-left",
+      "sweep-in-right",
+      "sweep-out-left",
+      "sweep-out-right"
+    );
     modalImg.classList.add(outClass);
 
     setTimeout(() => {

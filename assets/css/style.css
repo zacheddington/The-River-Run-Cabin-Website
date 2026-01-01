@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
-
 /* ==========================================================================
    CSS Custom Properties (Design Tokens)
    ========================================================================== */
@@ -53,6 +51,18 @@
     --color-nav-text: #f0f0f0;
     --color-link: #64b5f6;
     --color-link-hover: #90caf9;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
@@ -159,6 +169,11 @@ nav a {
   transition: background var(--transition-fast), color var(--transition-fast);
 }
 
+nav a[aria-current="page"] {
+  background: var(--color-accent);
+  color: var(--color-gold);
+}
+
 nav a:hover {
   background: var(--color-accent);
   color: var(--color-gold);
@@ -196,9 +211,32 @@ nav a:focus-visible {
   display: block;
   width: 28px;
   height: 3px;
-  background: var(--color-white);
+  background: var(--color-nav-text);
   border-radius: 2px;
-  transition: transform var(--transition-smooth), opacity var(--transition-smooth);
+  transition: transform var(--transition-smooth),
+    opacity var(--transition-smooth);
+}
+
+/* Nav Overlay - closes menu when clicking outside */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2000;
+  cursor: pointer;
+}
+
+.nav-toggle:checked ~ .nav-overlay {
+  display: block;
+}
+
+/* Prevent body scroll when nav is open */
+body.nav-open {
+  overflow: hidden;
 }
 
 /* ==========================================================================
@@ -248,7 +286,7 @@ nav a:focus-visible {
 }
 
 .property-description p {
-  color: var(--color-accent);
+  color: var(--color-text);
   line-height: 1.8;
 }
 
@@ -488,8 +526,8 @@ nav a:focus-visible {
 }
 
 .attraction-card a {
-  color: var(--color-white);
-  background: var(--color-accent);
+  color: var(--color-overlay-text);
+  background: var(--color-nav);
   padding: 0.4em 1.2em;
   border-radius: var(--radius-sm);
   text-decoration: none;
@@ -500,7 +538,7 @@ nav a:focus-visible {
 
 .attraction-card a:hover {
   background: var(--color-gold);
-  color: var(--color-text);
+  color: var(--color-text-dark);
 }
 
 /* See More Modal (Area page) */
@@ -751,8 +789,8 @@ footer a:hover {
     transform: translateX(100%);
     opacity: 0;
     pointer-events: none;
-    transition: transform 0.55s cubic-bezier(0.77, 0, 0.18, 1), 
-                opacity var(--transition-smooth);
+    transition: transform 0.55s cubic-bezier(0.77, 0, 0.18, 1),
+      opacity var(--transition-smooth);
     z-index: 2001;
   }
 
@@ -827,9 +865,9 @@ footer a:hover {
   }
 
   nav {
-    width: 90vw;
-    min-width: 90vw;
-    max-width: 90vw;
+    width: 50vw;
+    min-width: 140px;
+    max-width: 220px;
   }
 }
 

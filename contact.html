@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contact The River Run Cabin — Get in touch for questions about your stay on Henry's Fork of the Snake River in Idaho." />
+    <meta
+      name="description"
+      content="Contact The River Run Cabin — Get in touch for questions about your stay on Henry's Fork of the Snake River in Idaho."
+    />
     <title>Contact - The River Run Cabin</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="canonical" href="https://theriverruncabin.com/contact.html" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -12,8 +17,20 @@
     <header>
       <div class="navbar">
         <div class="site-title">The River Run Cabin</div>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
-        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu" role="button" tabindex="0">
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-hidden="true"
+        />
+        <label
+          for="nav-toggle"
+          class="nav-toggle-label"
+          aria-label="Toggle navigation menu"
+          role="button"
+          tabindex="0"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.getElementById('nav-toggle').click();}"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -22,7 +39,7 @@
           <a href="index.html">Home</a>
           <a href="area.html">Area</a>
           <a href="qa.html">Q&amp;A</a>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html" aria-current="page">Contact</a>
           <a
             href="https://www.kabino.com/vacation-rental/the-river-run-cabin/"
             class="book-btn"
@@ -31,6 +48,7 @@
             >Book</a
           >
         </nav>
+        <label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
       </div>
     </header>
     <main id="main-content">
@@ -48,7 +66,11 @@
         </p>
         <p>
           Address:<br />
-          <a href="https://www.google.com/maps/search/?api=1&query=3617+Fishermans+Drive+Ashton+ID+83420" target="_blank" rel="noopener">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=3617+Fishermans+Drive+Ashton+ID+83420"
+            target="_blank"
+            rel="noopener"
+          >
             3617 Fishermans Drive<br />
             Ashton, ID 83420
           </a>
@@ -56,12 +78,17 @@
       </section>
     </main>
     <footer>
-      <p>&copy; <span id="year"></span> The River Run Cabin. All rights reserved.</p>
       <p>
-        <a href="mailto:theriverruncabin@gmail.com">theriverruncabin@gmail.com</a> |
+        &copy; <span id="year"></span> The River Run Cabin. All rights reserved.
+      </p>
+      <p>
+        <a href="mailto:theriverruncabin@gmail.com"
+          >theriverruncabin@gmail.com</a
+        >
+        |
         <a href="tel:+12086563650">208-656-3650</a>
       </p>
-      <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </footer>
+    <script src="assets/js/nav.js"></script>
   </body>
 </html>
