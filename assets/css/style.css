@@ -45,12 +45,20 @@
     --color-bg: #1a1a1a;
     --color-text: #f0f0f0;
     --color-accent: #8fa58e;
+    --color-accent-dark: #3d4a3e;
     --color-white: #2a2a2a;
     --color-muted: #333;
     --color-border: #444;
     --color-nav-text: #f0f0f0;
     --color-link: #64b5f6;
     --color-link-hover: #90caf9;
+  }
+
+  /* Nav link hover/active states need darker background for contrast */
+  nav a[aria-current="page"],
+  nav a:not([aria-current="page"]):hover {
+    background: var(--color-accent-dark);
+    color: var(--color-gold);
   }
 }
 
