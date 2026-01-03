@@ -29,9 +29,13 @@
 
   // Prevent touch scrolling on nav overlay
   if (navOverlay) {
-    navOverlay.addEventListener("touchmove", (e) => {
-      e.preventDefault();
-    });
+    navOverlay.addEventListener(
+      "touchmove",
+      (e) => {
+        e.preventDefault();
+      },
+      { passive: false }
+    );
   }
 
   // Dynamic year in footer
