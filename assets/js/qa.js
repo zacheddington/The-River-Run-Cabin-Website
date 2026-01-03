@@ -65,10 +65,10 @@
       q: "Fly Shops?",
       a: `
         <table class="flyshop-table">
-          <tr><td>TRR Outfitters Fly Shop</td><td>Ashton</td><td><a href="tel:+12086523008">208-652-3008</a></td></tr>
-          <tr><td>TRR Outfitters Fly Shop</td><td>Island Park</td><td><a href="tel:+12085587501">208-558-7501</a></td></tr>
-          <tr><td>Trout Hunter</td><td>Island Park</td><td><a href="tel:+12085588006">208-558-8006</a></td></tr>
-          <tr><td>Henry's Fork Anglers</td><td>Island Park</td><td><a href="tel:+12085587525">208-558-7525</a></td></tr>
+          <tr><td><a href="https://trroutfitters.com/ashton-fly-shop/" target="_blank" rel="noopener">TRR Outfitters Fly Shop</a></td><td>Ashton</td><td><a href="tel:+12086523008">208-652-3008</a></td></tr>
+          <tr><td><a href="https://trroutfitters.com/island-park-fly-shop/" target="_blank" rel="noopener">TRR Outfitters Fly Shop</a></td><td>Island Park</td><td><a href="tel:+12085587501">208-558-7501</a></td></tr>
+          <tr><td><a href="https://trouthunt.com/fishing/" target="_blank" rel="noopener">TroutHunter</a></td><td>Island Park</td><td><a href="tel:+12085588006">208-558-8006</a></td></tr>
+          <tr><td><a href="https://henrysforkanglers.com/" target="_blank" rel="noopener">Henry's Fork Anglers</a></td><td>Island Park</td><td><a href="tel:+12085587525">208-558-7525</a></td></tr>
         </table>
       `,
     },
