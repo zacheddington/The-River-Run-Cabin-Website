@@ -594,6 +594,17 @@ body.nav-open {
   text-align: left;
 }
 
+.modal-content h2 {
+  color: var(--color-text);
+  margin: 0 0 0.75em;
+}
+
+.modal-content p {
+  color: var(--color-accent);
+  margin: 0;
+  line-height: 1.6;
+}
+
 .modal-close {
   position: absolute;
   top: 0.7em;
