@@ -79,19 +79,6 @@
   /** @type {number} Animation duration in milliseconds */
   const ANIMATION_DURATION = 350;
 
-  /**
-   * Preload all gallery images for instant display
-   */
-  function preloadImages() {
-    images.forEach((filename) => {
-      const img = new Image();
-      img.src = `${IMAGE_PATH}${filename}`;
-    });
-  }
-
-  // Start preloading immediately
-  preloadImages();
-
   // Create modal element
   const modal = document.createElement("div");
   modal.className = "gallery-modal";
@@ -132,7 +119,7 @@
       "sweep-in-left",
       "sweep-in-right",
       "sweep-out-left",
-      "sweep-out-right"
+      "sweep-out-right",
     );
     modalImg.classList.add(outClass);
 
@@ -276,7 +263,7 @@
       touchStartX = e.changedTouches[0].screenX;
       touchStartY = e.changedTouches[0].screenY;
     },
-    { passive: true }
+    { passive: true },
   );
 
   modal.addEventListener(
@@ -285,7 +272,7 @@
       // Prevent scrolling while swiping in the modal
       e.preventDefault();
     },
-    { passive: false }
+    { passive: false },
   );
 
   modal.addEventListener("touchend", (e) => {
