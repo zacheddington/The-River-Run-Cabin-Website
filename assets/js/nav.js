@@ -9,7 +9,18 @@
   // Hamburger menu scroll lock
   const navToggle = document.getElementById("nav-toggle");
   const navOverlay = document.querySelector(".nav-overlay");
+  const navToggleLabel = document.querySelector(".nav-toggle-label");
   let scrollPosition = 0;
+
+  // Keyboard accessibility for hamburger toggle label
+  if (navToggleLabel) {
+    navToggleLabel.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        navToggle.click();
+      }
+    });
+  }
 
   if (navToggle) {
     navToggle.addEventListener("change", function () {
@@ -34,7 +45,7 @@
       (e) => {
         e.preventDefault();
       },
-      { passive: false }
+      { passive: false },
     );
   }
 

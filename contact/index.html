@@ -16,6 +16,19 @@
       })(window, document, "script", "dataLayer", "GTM-5GNXS4H8");
     </script>
     <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-62DTE1SX6Z"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-62DTE1SX6Z");
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#2d3a2e" />
     <meta
@@ -84,12 +97,6 @@
           aria-label="Toggle navigation menu"
           role="button"
           tabindex="0"
-          onkeydown="
-            if (event.key === 'Enter' || event.key === ' ') {
-              event.preventDefault();
-              document.getElementById('nav-toggle').click();
-            }
-          "
         >
           <span></span>
           <span></span>
@@ -138,14 +145,7 @@
       </section>
     </main>
     <footer>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 0.2em;
-        "
-      >
+      <div class="footer-content">
         <span
           >&copy; <span id="year"></span> The River Run Cabin. All rights
           reserved.</span
@@ -157,13 +157,7 @@
           |
           <a href="tel:+12086563650">208-656-3650</a>
         </span>
-        <span
-          style="
-            font-size: 0.95em;
-            color: var(--color-accent);
-            margin-top: 0.2em;
-          "
-        >
+        <span class="footer-credit">
           If you like this website and want your own, please contact Zach at
           <a href="mailto:zacheddington@gmail.com">zacheddington@gmail.com</a>
         </span>

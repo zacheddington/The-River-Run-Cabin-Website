@@ -53,6 +53,28 @@
     --color-link: #64b5f6;
     --color-link-hover: #90caf9;
   }
+
+  /* Component overrides for dark mode */
+  .gallery-modal {
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .modal {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .rental-table th {
+    background: var(--color-muted);
+  }
+
+  .gallery-modal-caption {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  }
+
+  .gallery-modal-close,
+  .gallery-modal-arrow {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  }
 }
 
 /* Reduced Motion Support */
@@ -173,7 +195,9 @@ nav a {
   font-weight: 600;
   padding: 0.4em 1em;
   border-radius: var(--radius-sm);
-  transition: background var(--transition-fast), color var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
 nav a[aria-current="page"] {
@@ -222,7 +246,8 @@ nav a:focus-visible {
   height: 3px;
   background: var(--color-nav-text);
   border-radius: 2px;
-  transition: transform var(--transition-smooth),
+  transition:
+    transform var(--transition-smooth),
     opacity var(--transition-smooth);
 }
 
@@ -287,7 +312,8 @@ body.nav-open {
   display: block;
   opacity: 0;
   transform: translateY(60px);
-  transition: opacity 2.2s cubic-bezier(0.4, 0, 0.6, 1),
+  transition:
+    opacity 2.2s cubic-bezier(0.4, 0, 0.6, 1),
     transform 2s cubic-bezier(0.4, 0, 0.6, 1);
 }
 
@@ -342,7 +368,9 @@ body.nav-open {
   box-shadow: var(--shadow-sm);
   object-fit: cover;
   cursor: pointer;
-  transition: transform var(--transition-fast), filter var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    filter var(--transition-fast);
 }
 
 .gallery-grid img:hover,
@@ -375,8 +403,8 @@ body.nav-open {
   overscroll-behavior: contain;
 }
 
-.gallery-modal[style*="display: flex"] {
-  display: flex !important;
+.gallery-modal.gallery-modal--open {
+  display: flex;
 }
 
 .gallery-modal-img {
@@ -385,7 +413,8 @@ body.nav-open {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-modal);
   background: var(--color-white);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -562,7 +591,9 @@ body.nav-open {
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
-  transition: background var(--transition-fast), color var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .attraction-card a:hover {
@@ -807,6 +838,19 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.footer-credit {
+  font-size: 0.95em;
+  color: var(--color-accent);
+  margin-top: 0.2em;
+}
+
 /* ==========================================================================
    Responsive Design - Mobile First
    ========================================================================== */
@@ -829,7 +873,8 @@ footer a:hover {
     transform: translateX(100%);
     opacity: 0;
     pointer-events: none;
-    transition: transform 0.55s cubic-bezier(0.77, 0, 0.18, 1),
+    transition:
+      transform 0.55s cubic-bezier(0.77, 0, 0.18, 1),
       opacity var(--transition-smooth);
     z-index: 2001;
   }

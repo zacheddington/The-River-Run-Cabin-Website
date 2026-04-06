@@ -82,7 +82,6 @@
   // Create modal element
   const modal = document.createElement("div");
   modal.className = "gallery-modal";
-  modal.style.display = "none";
   modal.setAttribute("role", "dialog");
   modal.setAttribute("aria-modal", "true");
   modal.setAttribute("aria-label", "Gallery image viewer");
@@ -148,7 +147,7 @@
     modalImg.src = `${IMAGE_PATH}${images[index]}`;
     modalImg.alt = titles[index] ?? "";
     modalCaption.textContent = titles[index] ?? "";
-    modal.style.display = "flex";
+    modal.classList.add("gallery-modal--open");
 
     // Lock body scroll (same approach as nav menu)
     modalScrollPosition = window.scrollY;
@@ -165,7 +164,7 @@
    * Close the modal and restore page scroll
    */
   function closeModal() {
-    modal.style.display = "none";
+    modal.classList.remove("gallery-modal--open");
 
     // Restore body scroll
     document.body.style.overflow = "";
@@ -232,7 +231,7 @@
   }
 
   document.addEventListener("keydown", (e) => {
-    if (modal.style.display !== "flex") return;
+    if (!modal.classList.contains("gallery-modal--open")) return;
 
     switch (e.key) {
       case "ArrowLeft":

@@ -16,6 +16,19 @@
       })(window, document, "script", "dataLayer", "GTM-5GNXS4H8");
     </script>
     <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-62DTE1SX6Z"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-62DTE1SX6Z");
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#2d3a2e" />
     <meta
@@ -56,6 +69,55 @@
         rel="stylesheet"
       />
     </noscript>
+    <!-- Structured Data for Rich Search Results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is there an experienced river guide you would recommend?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We recommend visiting Three Rivers Ranch for guide information."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I rent boats, tubes, or motorsports equipment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Float boat rentals from Miller Drift Boats in Ashton, kayak/tube/raft rentals from Rapid River Rentals in Ashton, and motorsport rentals (ATV/UTV/Snowmobile) from Goldenspike Powersports in Ashton or Island Park Adventures in Island Park. Machines are not provided with your cabin rental."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where are the nearest airports?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Idaho Falls (IDA) 54 miles/1h, Pocatello (PIC) 111 miles/1h 40m, Jackson WY (JAC) 86 miles/1h 50m, Bozeman MT (BZN) 143 miles/2h 40m, Boise (BOI) 334 miles/4h 40m, Yellowstone Airport (WYS) 55 miles/1h (summer only)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What local restaurants are nearby?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In Ashton (4 miles): Big Jud's, 511 Main Fountain & Pizzeria, El Rincon Mexican, Trails Inn, Frost Top Drive-In, Subway & Hot Stuff Pizza, Dave's Market & Deli. In St. Anthony (18 miles): Fong's Cafe, Crissy's Chicken To Go, Soul Fly Pizza. In Island Park (20-30 miles): Last Chance Bar & Grill at TroutHunter, Cafe Sabor, Lakeside Lodge Restaurant, Pond's Lodge Restaurant."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where are the nearest fly shops?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TRR Outfitters Fly Shop in Ashton (208-652-3008), TRR Outfitters Fly Shop in Island Park (208-558-7501), TroutHunter in Island Park (208-558-8006), Henry's Fork Anglers in Island Park (208-558-7525)."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -84,12 +146,6 @@
           aria-label="Toggle navigation menu"
           role="button"
           tabindex="0"
-          onkeydown="
-            if (event.key === 'Enter' || event.key === ' ') {
-              event.preventDefault();
-              document.getElementById('nav-toggle').click();
-            }
-          "
         >
           <span></span>
           <span></span>
@@ -132,14 +188,7 @@
       </section>
     </main>
     <footer>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 0.2em;
-        "
-      >
+      <div class="footer-content">
         <span
           >&copy; <span id="year"></span> The River Run Cabin. All rights
           reserved.</span
@@ -151,13 +200,7 @@
           |
           <a href="tel:+12086563650">208-656-3650</a>
         </span>
-        <span
-          style="
-            font-size: 0.95em;
-            color: var(--color-accent);
-            margin-top: 0.2em;
-          "
-        >
+        <span class="footer-credit">
           If you like this website and want your own, please contact Zach at
           <a href="mailto:zacheddington@gmail.com">zacheddington@gmail.com</a>
         </span>
