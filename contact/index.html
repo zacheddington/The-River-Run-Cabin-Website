@@ -4,23 +4,9 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; frame-src https://www.googletagmanager.com https://www.google.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; frame-src https://www.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'"
     />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5GNXS4H8");
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics (GA4) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-62DTE1SX6Z"
@@ -37,54 +23,45 @@
     <meta name="theme-color" content="#2d3a2e" />
     <meta
       name="description"
-      content="Contact The River Run Cabin — Get in touch for questions about your stay on Henry's Fork of the Snake River in Idaho."
+      content="Contact The River Run Cabin in Ashton, Idaho by phone or email, check availability on VRBO, or find us on the map."
     />
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Contact - The River Run Cabin" />
+    <meta property="og:site_name" content="The River Run Cabin" />
+    <meta property="og:title" content="Contact &amp; Booking | The River Run Cabin" />
     <meta
       property="og:description"
-      content="Contact The River Run Cabin — Get in touch for questions about your stay on Henry's Fork of the Snake River in Idaho."
+      content="Call, email, or check availability for The River Run Cabin on Henry's Fork in Ashton, Idaho."
     />
     <meta
       property="og:image"
-      content="https://theriverruncabin.com/assets/images/Cabin/01-Sign.jpg"
+      content="https://www.theriverruncabin.com/assets/images/og-image.jpg"
     />
-    <meta property="og:url" content="https://theriverruncabin.com/contact/" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://www.theriverruncabin.com/contact/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>Contact - The River Run Cabin</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-    <link rel="apple-touch-icon" href="../assets/images/Cabin/01-Sign.jpg" />
-    <link rel="canonical" href="https://theriverruncabin.com/contact/" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Contact &amp; Booking | The River Run Cabin</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="canonical" href="https://www.theriverruncabin.com/contact/" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://www.kabino.com" />
-    <link rel="dns-prefetch" href="https://www.google.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Young+Serif&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media = 'all'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Young+Serif&display=swap"
         rel="stylesheet"
       />
     </noscript>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5GNXS4H8"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <div class="navbar">
@@ -94,11 +71,14 @@
           id="nav-toggle"
           class="nav-toggle"
           aria-hidden="true"
+          tabindex="-1"
         />
         <label
           for="nav-toggle"
           class="nav-toggle-label"
-          aria-label="Toggle navigation menu"
+          aria-label="Menu"
+          aria-controls="main-nav"
+          aria-expanded="false"
           role="button"
           tabindex="0"
         >
@@ -112,11 +92,13 @@
           <a href="/qa/">Q&amp;A</a>
           <a href="/contact/" aria-current="page">Contact</a>
           <a
-            href="https://www.kabino.com/vacation-rental/the-river-run-cabin/"
+            href="https://www.vrbo.com/4506360"
             class="book-btn"
             target="_blank"
             rel="noopener"
-            >Book</a
+            >Book<span class="visually-hidden">
+              on VRBO (opens in new tab)</span
+            ></a
           >
         </nav>
         <label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
@@ -138,15 +120,40 @@
         <p>
           Address:<br />
           <a
-            href="https://www.google.com/maps/search/?api=1&query=3617+Fishermans+Drive+Ashton+ID+83420"
+            href="https://www.google.com/maps/search/?api=1&amp;query=3617+Fishermans+Drive+Ashton+ID+83420"
             target="_blank"
             rel="noopener"
           >
             3617 Fishermans Drive<br />
-            Ashton, ID 83420
+            Ashton, ID 83420<span class="visually-hidden">
+              (opens Google Maps in new tab)</span
+            >
           </a>
         </p>
+        <div class="contact-actions">
+          <a
+            class="btn btn-primary"
+            href="https://www.vrbo.com/4506360"
+            target="_blank"
+            rel="noopener"
+            >Check Availability on VRBO<span class="visually-hidden">
+              (opens in new tab)</span
+            ></a
+          >
+          <p class="booking-direct">
+            Prefer to book directly? Call or email us and we'll set it up.
+          </p>
+        </div>
       </section>
+      <div class="contact-map map-section">
+        <iframe
+          src="https://www.google.com/maps?q=3617+Fishermans+Drive,+Ashton,+ID+83420&amp;output=embed"
+          height="300"
+          allowfullscreen
+          loading="lazy"
+          title="Google Map showing The River Run Cabin at 3617 Fishermans Drive, Ashton, Idaho"
+        ></iframe>
+      </div>
     </main>
     <footer>
       <div class="footer-content">
@@ -167,6 +174,6 @@
         </span>
       </div>
     </footer>
-    <script src="../assets/js/nav.js"></script>
+    <script src="/assets/js/nav.js"></script>
   </body>
 </html>
