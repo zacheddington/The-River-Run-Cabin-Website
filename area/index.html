@@ -4,23 +4,9 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; frame-src https://www.googletagmanager.com https://www.google.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; frame-src https://www.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'"
     />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5GNXS4H8");
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics (GA4) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-62DTE1SX6Z"
@@ -37,56 +23,48 @@
     <meta name="theme-color" content="#2d3a2e" />
     <meta
       name="description"
-      content="Explore attractions near The River Run Cabin — Yellowstone, Grand Teton, Mesa Falls, Harriman State Park, and more. Plan your Idaho adventure."
+      content="Things to do near The River Run Cabin in Ashton, Idaho, with drive times: Yellowstone, Grand Teton, Mesa Falls, Harriman State Park, Island Park, and more."
     />
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The River Run Cabin" />
     <meta
       property="og:title"
-      content="Area Attractions - The River Run Cabin"
+      content="Things to Do Near Ashton, Idaho | The River Run Cabin"
     />
     <meta
       property="og:description"
-      content="Explore attractions near The River Run Cabin — Yellowstone, Grand Teton, Mesa Falls, Harriman State Park, and more."
+      content="Yellowstone, Grand Teton, Mesa Falls, Harriman State Park, and more, with drive times from The River Run Cabin."
     />
     <meta
       property="og:image"
-      content="https://theriverruncabin.com/assets/images/Area/Yellowstone.jpg"
+      content="https://www.theriverruncabin.com/assets/images/og-image.jpg"
     />
-    <meta property="og:url" content="https://theriverruncabin.com/area/" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://www.theriverruncabin.com/area/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>Area - The River Run Cabin</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-    <link rel="apple-touch-icon" href="../assets/images/Cabin/01-Sign.jpg" />
-    <link rel="canonical" href="https://theriverruncabin.com/area/" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Things to Do Near Ashton, Idaho | The River Run Cabin</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="canonical" href="https://www.theriverruncabin.com/area/" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://www.kabino.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Young+Serif&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media = 'all'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Young+Serif&display=swap"
         rel="stylesheet"
       />
     </noscript>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5GNXS4H8"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <div class="navbar">
@@ -96,11 +74,14 @@
           id="nav-toggle"
           class="nav-toggle"
           aria-hidden="true"
+          tabindex="-1"
         />
         <label
           for="nav-toggle"
           class="nav-toggle-label"
-          aria-label="Toggle navigation menu"
+          aria-label="Menu"
+          aria-controls="main-nav"
+          aria-expanded="false"
           role="button"
           tabindex="0"
         >
@@ -114,11 +95,13 @@
           <a href="/qa/">Q&amp;A</a>
           <a href="/contact/">Contact</a>
           <a
-            href="https://www.kabino.com/vacation-rental/the-river-run-cabin/"
+            href="https://www.vrbo.com/4506360"
             class="book-btn"
             target="_blank"
             rel="noopener"
-            >Book</a
+            >Book<span class="visually-hidden">
+              on VRBO (opens in new tab)</span
+            ></a
           >
         </nav>
         <label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
@@ -127,9 +110,371 @@
     <main id="main-content">
       <section class="area-attractions">
         <h1>Explore the Area</h1>
-        <div class="attractions-list">
-          <!-- Attractions will be loaded here by JS -->
+        <p class="area-intro">Drive times are from the cabin.</p>
+        <!-- Shown by area.js; without JavaScript the list keeps its suggested order -->
+        <div class="area-sort" role="group" aria-label="Sort attractions" hidden>
+          <span class="area-sort-label">Sort:</span>
+          <button type="button" data-sort="suggested" aria-pressed="true">
+            Suggested
+          </button>
+          <button type="button" data-sort="distance" aria-pressed="false">
+            Closest first
+          </button>
         </div>
+        <!-- data-minutes = Google Maps drive time from 3617 Fishermans Dr; used for sorting -->
+        <ul class="attractions-list">
+          <li class="attraction-card" data-minutes="54">
+            <img
+              src="/assets/images/Area/Yellowstone.webp"
+              alt="Yellowstone National Park"
+              width="960"
+              height="661"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>Yellowstone National Park</h2>
+              <p class="attraction-distance">54 min &middot; 53 mi to the West Entrance</p>
+              <p>
+                Just under one hour from the west entrance of the world-renowned
+                Yellowstone National Park, you can visit some of the most
+                impressive and famous geothermal lakes, geysers, mountains, and
+                wildlife that the world has to offer.
+              </p>
+              <a
+                class="attraction-link"
+                href="https://www.nps.gov/yell/index.htm"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: Yellowstone National Park (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+          <li class="attraction-card" data-minutes="26">
+            <img
+              src="/assets/images/Area/Mesa-Falls.webp"
+              alt="Mesa Falls"
+              width="960"
+              height="640"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>Mesa Falls Scenic Byway</h2>
+              <p class="attraction-distance">26 min &middot; 20 mi to Upper Mesa Falls</p>
+              <p>
+                Roughly 30 minutes away, the Mesa Falls Scenic Byway heads
+                northeast into the lush landscape of the Targhee National
+                Forest. It's a loop that runs for nearly thirty impressive miles
+                all the way to the Island Park area. This byway includes the
+                popular Warm River campground and two of the most spectacular
+                waterfalls in the West&mdash;lower and upper Mesa Falls. At the
+                upper falls you can stop at the historic Big Falls interpretive
+                center to learn about the geology and history of the area.
+              </p>
+              <a
+                class="attraction-link"
+                href="https://visitidaho.org/things-to-do/horseback-riding/mesa-falls-scenic-byway/"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: Mesa Falls Scenic Byway (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+          <li class="attraction-card" data-minutes="18">
+            <img
+              src="/assets/images/Area/Harriman-State-Park.webp"
+              alt="Harriman State Park"
+              width="960"
+              height="641"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>Harriman State Park</h2>
+              <p class="attraction-distance">18 min &middot; 17 mi</p>
+              <p>
+                Less than 20 minutes away, Harriman State Park lies within a
+                16,000-acre wildlife refuge in the Greater Yellowstone
+                Ecosystem. Known for its beautiful scenery and wildlife,
+                Harriman State Park offers 22 miles of hiking, mountain biking,
+                and horseback riding trails that slink through the meadows,
+                meander along riverbanks, and through lush evergreen forests.
+                Some of the best fly-fishing waters in the nation flow through
+                eight miles of Harriman State Park, known by anglers all over
+                the world as &ldquo;The Ranch.&rdquo; Moose, elk, and trumpeter
+                swans, the world's largest waterfowl species, are a common sight
+                at Harriman.
+              </p>
+              <a
+                class="attraction-link"
+                href="https://parksandrecreation.idaho.gov/state-park/harriman-state-park/"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: Harriman State Park (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+          <li class="attraction-card" data-minutes="44">
+            <img
+              src="/assets/images/Area/Yellowstone-Bear-World.webp"
+              alt="Yellowstone Bear World"
+              width="960"
+              height="686"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>Yellowstone Bear World</h2>
+              <p class="attraction-distance">44 min &middot; 39 mi</p>
+              <p>
+                Located 5 miles south of Rexburg, ID on US Hwy 20. Yellowstone
+                Bear World is a drive-thru wildlife park. You are surrounded by
+                free-roaming wildlife of North America in the comfort of your
+                personal vehicle. Expect to see Black and Grizzly Bear, Rocky
+                Mountain Elk, Bison, Moose, White-tail Deer, and Rocky Mountain
+                Goats.
+              </p>
+              <a
+                class="attraction-link"
+                href="https://yellowstonebearworld.com/"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: Yellowstone Bear World (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+          <li class="attraction-card" data-minutes="39">
+            <img
+              src="/assets/images/Area/Yellowstone-Playhouse.webp"
+              alt="Yellowstone Playhouse"
+              width="960"
+              height="960"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>Yellowstone Playhouse</h2>
+              <p class="attraction-distance">39 min &middot; 39 mi</p>
+              <p>
+                Just 45 minutes away, an evening at Yellowstone Playhouse is a
+                must. Great family-friendly entertainment and an awesome dinner.
+                Tickets go fast, so get yours early!
+              </p>
+              <a
+                class="attraction-link"
+                href="https://yellowstoneplayhouse.com/"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: Yellowstone Playhouse (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+          <li class="attraction-card" data-minutes="113">
+            <img
+              src="/assets/images/Area/Grand-Teton-National-Park.webp"
+              alt="Grand Teton National Park"
+              width="960"
+              height="640"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>Grand Teton National Park</h2>
+              <p class="attraction-distance">1 hr 53 min &middot; 89 mi to Moose</p>
+              <p>
+                About a two-hour drive to the south entrance of Grand Teton
+                National Park, enjoy endless bird-watching, horseback riding,
+                hiking and biking trails, and scores of wildlife. This is a
+                perfect place to unwind and enjoy nature at its finest.
+              </p>
+              <a
+                class="attraction-link"
+                href="https://www.nps.gov/grte/index.htm"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: Grand Teton National Park (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+          <li class="attraction-card" data-minutes="25">
+            <img
+              src="/assets/images/Area/Island-Park.webp"
+              alt="Island Park"
+              width="475"
+              height="553"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>Island Park</h2>
+              <p class="attraction-distance">25 min &middot; 25 mi</p>
+              <p>
+                Claiming to be the &ldquo;Longest Main Street&rdquo; in America
+                at 33 miles long, there are endless activities just a 20-minute
+                drive north to Island Park. Fishing, fly shops, ATV rentals,
+                restaurants, national forest roads to explore, biking, and
+                hiking&mdash;you can find it all in Island Park.
+              </p>
+              <a
+                class="attraction-link"
+                href="https://islandparkchamber.org/"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: Island Park (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+          <li class="attraction-card" data-minutes="54">
+            <img
+              src="/assets/images/Area/West-Yellowstone.webp"
+              alt="West Yellowstone"
+              width="276"
+              height="183"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>West Yellowstone</h2>
+              <p class="attraction-distance">54 min &middot; 53 mi</p>
+              <p>
+                Best known as the West Entrance to Yellowstone National Park,
+                West Yellowstone is a destination for dining, IMAX theater, Wolf
+                and Bear visitors center, guided Yellowstone trips (year-round),
+                nightly rodeo (summer months), snow machine rentals (winter
+                months), and an airport (summer months) that have multiple daily
+                arrivals and departures.
+              </p>
+              <a
+                class="attraction-link"
+                href="https://www.townofwestyellowstone.com/"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: West Yellowstone (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+          <li class="attraction-card" data-minutes="95">
+            <img
+              src="/assets/images/Area/Jackson-Hole.webp"
+              alt="Jackson, Wyoming"
+              width="960"
+              height="720"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>Jackson, WY</h2>
+              <p class="attraction-distance">1 hr 35 min &middot; 76 mi</p>
+              <p>
+                A 90-minute drive from Ashton, ID and located just 10 miles from
+                the south entrance to Grand Teton National Park, Jackson is a
+                worldwide destination for year-round outdoor activities.
+              </p>
+              <a
+                class="attraction-link"
+                href="https://www.jacksonwy.gov/"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: Jackson, Wyoming (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+          <li class="attraction-card" data-minutes="100">
+            <img
+              src="/assets/images/Area/Bar-T5.webp"
+              alt="Bar T5 Covered Wagon Cookout"
+              width="960"
+              height="540"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>Bar T5 Covered Wagon Cookout</h2>
+              <p class="attraction-distance">1 hr 40 min &middot; 77 mi</p>
+              <p>
+                Looking for a great meal and a show? Bar T5 Covered Wagon
+                Cookout is the place to go. Located 77 miles from Ashton in
+                Jackson, WY.
+              </p>
+              <a
+                class="attraction-link"
+                href="https://www.bart5.com/"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: Bar T5 Covered Wagon Cookout (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+          <li class="attraction-card" data-minutes="6">
+            <img
+              src="/assets/images/Area/Rapid-River-Rentals.webp"
+              alt="Rapid River Rentals"
+              width="960"
+              height="480"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>Rapid River Rentals</h2>
+              <p class="attraction-distance">6 min &middot; 4 mi</p>
+              <p>
+                Rent kayaks, rafts, and tubes for tons of fun on the rivers and
+                lakes just in town!
+              </p>
+              <a
+                class="attraction-link"
+                href="https://rapidriverrentals.com/"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: Rapid River Rentals (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+          <li class="attraction-card" data-minutes="6">
+            <img
+              src="/assets/images/Area/Group-Snowmobiling.webp"
+              alt="A group snowmobiling"
+              width="960"
+              height="720"
+              loading="lazy"
+            />
+            <div class="attraction-card-body">
+              <h2>Outdoor Recreation</h2>
+              <p class="attraction-distance">6 min &middot; 4 mi to rentals in Ashton</p>
+              <p>
+                Explore hundreds of miles of scenic snowmobiling and ATV/UTV
+                trails right from the Ashton area. Whether you visit in summer
+                or winter, you'll find well-marked routes winding through
+                forests, meadows, and along the river, offering adventure for
+                all skill levels. Please note: machines are not provided with
+                your cabin rental, but there are several local outfitters where
+                you can rent snowmobiles or ATVs/UTVs for your outdoor
+                excursions.
+              </p>
+              <a
+                class="attraction-link"
+                href="https://www.gspikeidaho.com/"
+                target="_blank"
+                rel="noopener"
+                >Visit website<span class="visually-hidden"
+                  >: Goldenspike Powersports (opens in new tab)</span
+                ></a
+              >
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
     <footer>
@@ -151,7 +496,7 @@
         </span>
       </div>
     </footer>
-    <script src="../assets/js/area.js"></script>
-    <script src="../assets/js/nav.js"></script>
+    <script src="/assets/js/area.js"></script>
+    <script src="/assets/js/nav.js"></script>
   </body>
 </html>

@@ -4,23 +4,9 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; frame-src https://www.googletagmanager.com https://www.google.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; frame-src https://www.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'"
     />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5GNXS4H8");
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics (GA4) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-62DTE1SX6Z"
@@ -37,103 +23,45 @@
     <meta name="theme-color" content="#2d3a2e" />
     <meta
       name="description"
-      content="Frequently asked questions about The River Run Cabin — airports, restaurants, fly shops, boat rentals, and local tips for your Idaho getaway."
+      content="Questions about The River Run Cabin in Ashton, Idaho: river guides, boat and ATV rentals, nearby airports, restaurants, and fly shops."
     />
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Q&A - The River Run Cabin" />
+    <meta property="og:site_name" content="The River Run Cabin" />
+    <meta property="og:title" content="Questions & Answers | The River Run Cabin" />
     <meta
       property="og:description"
-      content="Frequently asked questions about The River Run Cabin — airports, restaurants, fly shops, boat rentals, and local tips."
+      content="River guides, rentals, airports, restaurants, and fly shops near The River Run Cabin in Ashton, Idaho."
     />
     <meta
       property="og:image"
-      content="https://theriverruncabin.com/assets/images/Cabin/01-Sign.jpg"
+      content="https://www.theriverruncabin.com/assets/images/og-image.jpg"
     />
-    <meta property="og:url" content="https://theriverruncabin.com/qa/" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://www.theriverruncabin.com/qa/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>Q&A - The River Run Cabin</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-    <link rel="apple-touch-icon" href="../assets/images/Cabin/01-Sign.jpg" />
-    <link rel="canonical" href="https://theriverruncabin.com/qa/" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Questions &amp; Answers | The River Run Cabin</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="canonical" href="https://www.theriverruncabin.com/qa/" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://www.kabino.com" />
-    <link rel="dns-prefetch" href="https://www.google.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Young+Serif&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media = 'all'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Young+Serif&display=swap"
         rel="stylesheet"
       />
     </noscript>
-    <!-- Structured Data for Rich Search Results -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is there an experienced river guide you would recommend?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We recommend visiting Three Rivers Ranch for guide information."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where can I rent boats, tubes, or motorsports equipment?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Float boat rentals from Miller Drift Boats in Ashton, kayak/tube/raft rentals from Rapid River Rentals in Ashton, and motorsport rentals (ATV/UTV/Snowmobile) from Goldenspike Powersports in Ashton or Island Park Adventures in Island Park. Machines are not provided with your cabin rental."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where are the nearest airports?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Idaho Falls (IDA) 54 miles/1h, Pocatello (PIC) 111 miles/1h 40m, Jackson WY (JAC) 86 miles/1h 50m, Bozeman MT (BZN) 143 miles/2h 40m, Boise (BOI) 334 miles/4h 40m, Yellowstone Airport (WYS) 55 miles/1h (summer only)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What local restaurants are nearby?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "In Ashton (4 miles): Big Jud's, 511 Main Fountain & Pizzeria, El Rincon Mexican, Trails Inn, Frost Top Drive-In, Subway & Hot Stuff Pizza, Dave's Market & Deli. In St. Anthony (18 miles): Fong's Cafe, Crissy's Chicken To Go, Soul Fly Pizza. In Island Park (20-30 miles): Last Chance Bar & Grill at TroutHunter, Cafe Sabor, Lakeside Lodge Restaurant, Pond's Lodge Restaurant."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where are the nearest fly shops?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "TRR Outfitters Fly Shop in Ashton (208-652-3008), TRR Outfitters Fly Shop in Island Park (208-558-7501), TroutHunter in Island Park (208-558-8006), Henry's Fork Anglers in Island Park (208-558-7525)."
-            }
-          }
-        ]
-      }
-    </script>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5GNXS4H8"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <div class="navbar">
@@ -143,11 +71,14 @@
           id="nav-toggle"
           class="nav-toggle"
           aria-hidden="true"
+          tabindex="-1"
         />
         <label
           for="nav-toggle"
           class="nav-toggle-label"
-          aria-label="Toggle navigation menu"
+          aria-label="Menu"
+          aria-controls="main-nav"
+          aria-expanded="false"
           role="button"
           tabindex="0"
         >
@@ -161,11 +92,13 @@
           <a href="/qa/" aria-current="page">Q&amp;A</a>
           <a href="/contact/">Contact</a>
           <a
-            href="https://www.kabino.com/vacation-rental/the-river-run-cabin/"
+            href="https://www.vrbo.com/4506360"
             class="book-btn"
             target="_blank"
             rel="noopener"
-            >Book</a
+            >Book<span class="visually-hidden">
+              on VRBO (opens in new tab)</span
+            ></a
           >
         </nav>
         <label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
@@ -173,20 +106,405 @@
     </header>
     <main id="main-content">
       <section class="qa-section">
-        <h1>Questions & Answers</h1>
-        <div class="qa-list">
-          <!-- Q&A will be loaded here by JS -->
+        <h1>Questions &amp; Answers</h1>
+        <!-- FAQPage microdata lives on the content itself, so there is only one
+             copy of each answer to keep up to date. -->
+        <div class="qa-list" itemscope itemtype="https://schema.org/FAQPage">
+          <article
+            class="qa-item"
+            itemscope
+            itemprop="mainEntity"
+            itemtype="https://schema.org/Question"
+          >
+            <h2 itemprop="name">
+              Is there an experienced river guide you would recommend?
+            </h2>
+            <div
+              itemscope
+              itemprop="acceptedAnswer"
+              itemtype="https://schema.org/Answer"
+            >
+              <div itemprop="text">
+                <p>
+                  We recommend
+                  <a
+                    href="https://threeriversranch.com/"
+                    target="_blank"
+                    rel="noopener"
+                    >Three Rivers Ranch</a
+                  >
+                  for guided trips.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="qa-item"
+            itemscope
+            itemprop="mainEntity"
+            itemtype="https://schema.org/Question"
+          >
+            <h2 itemprop="name">
+              Where can I rent boats, tubes, or motorsports equipment?
+            </h2>
+            <div
+              itemscope
+              itemprop="acceptedAnswer"
+              itemtype="https://schema.org/Answer"
+            >
+              <div itemprop="text">
+                <div class="table-scroll">
+                  <table class="qa-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Rental</th>
+                        <th scope="col">Business</th>
+                        <th scope="col">Town</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Drift boats</td>
+                        <td>
+                          <a
+                            href="https://millerdriftboats.com/"
+                            target="_blank"
+                            rel="noopener"
+                            >Miller Drift Boats</a
+                          >
+                        </td>
+                        <td>Ashton</td>
+                      </tr>
+                      <tr>
+                        <td>Kayaks, tubes, and rafts</td>
+                        <td>
+                          <a
+                            href="https://rapidriverrentals.com/"
+                            target="_blank"
+                            rel="noopener"
+                            >Rapid River Rentals</a
+                          >
+                        </td>
+                        <td>Ashton</td>
+                      </tr>
+                      <tr>
+                        <td>ATVs, UTVs, and snowmobiles</td>
+                        <td>
+                          <a
+                            href="https://www.gspikeidaho.com/"
+                            target="_blank"
+                            rel="noopener"
+                            >Goldenspike Powersports</a
+                          >
+                        </td>
+                        <td>Ashton</td>
+                      </tr>
+                      <tr>
+                        <td>ATVs, UTVs, and snowmobiles</td>
+                        <td>
+                          <a
+                            href="https://islandparkadventures.com/"
+                            target="_blank"
+                            rel="noopener"
+                            >Island Park Adventures</a
+                          >
+                        </td>
+                        <td>Island Park</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="qa-note">
+                  Machines are not provided with your cabin rental. Rentals are
+                  available from the providers above.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="qa-item"
+            itemscope
+            itemprop="mainEntity"
+            itemtype="https://schema.org/Question"
+          >
+            <h2 itemprop="name">Where are the nearest airports?</h2>
+            <div
+              itemscope
+              itemprop="acceptedAnswer"
+              itemtype="https://schema.org/Answer"
+            >
+              <div itemprop="text">
+                <div class="table-scroll">
+                  <table class="qa-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Airport</th>
+                        <th scope="col">Distance</th>
+                        <th scope="col">Drive</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Idaho Falls (IDA)</td>
+                        <td>54 miles</td>
+                        <td>1 hr</td>
+                      </tr>
+                      <tr>
+                        <td>Yellowstone Airport (WYS)</td>
+                        <td>55 miles</td>
+                        <td>1 hr (summer only)</td>
+                      </tr>
+                      <tr>
+                        <td>Jackson, WY (JAC)</td>
+                        <td>86 miles</td>
+                        <td>1 hr 50 min</td>
+                      </tr>
+                      <tr>
+                        <td>Pocatello (PIH)</td>
+                        <td>111 miles</td>
+                        <td>1 hr 40 min</td>
+                      </tr>
+                      <tr>
+                        <td>Bozeman, MT (BZN)</td>
+                        <td>143 miles</td>
+                        <td>2 hr 40 min</td>
+                      </tr>
+                      <tr>
+                        <td>Boise (BOI)</td>
+                        <td>334 miles</td>
+                        <td>4 hr 40 min</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="qa-item"
+            itemscope
+            itemprop="mainEntity"
+            itemtype="https://schema.org/Question"
+          >
+            <h2 itemprop="name">What restaurants are nearby?</h2>
+            <div
+              itemscope
+              itemprop="acceptedAnswer"
+              itemtype="https://schema.org/Answer"
+            >
+              <div itemprop="text" class="restaurant-groups">
+                <div>
+                  <h3>Ashton <span>4 miles</span></h3>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://ashtonidaho.com/membership/dining/big-juds"
+                        target="_blank"
+                        rel="noopener"
+                        >Big Jud's</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.511mainashton.com/"
+                        target="_blank"
+                        rel="noopener"
+                        >511 Main Fountain &amp; Pizzeria</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://ashtonidaho.com/membership/dining/el-rincon"
+                        target="_blank"
+                        rel="noopener"
+                        >El Rincon Mexican</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://trailsinnrestaurantashton.com/"
+                        target="_blank"
+                        rel="noopener"
+                        >Trails Inn</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://frostopdrivein.com/"
+                        target="_blank"
+                        rel="noopener"
+                        >Frost Top Drive-In</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://restaurants.subway.com/united-states/id/ashton/921-north-hwy-20"
+                        target="_blank"
+                        rel="noopener"
+                        >Subway &amp; Hot Stuff Pizza</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.davesjubilee.com/"
+                        target="_blank"
+                        rel="noopener"
+                        >Dave's Market &amp; Deli</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>St. Anthony <span>18 miles</span></h3>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://fongscafestanthony.com/"
+                        target="_blank"
+                        rel="noopener"
+                        >Fong's Cafe</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://soulflypizza.com/"
+                        target="_blank"
+                        rel="noopener"
+                        >Soul Fly Pizza</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>Island Park <span>20&ndash;30 miles</span></h3>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://trouthunt.com/bar-grill/"
+                        target="_blank"
+                        rel="noopener"
+                        >Last Chance Bar &amp; Grill at TroutHunter</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.cafesabor.com/"
+                        target="_blank"
+                        rel="noopener"
+                        >Cafe Sabor</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.lakesidelodgeandresort.com/restaurant"
+                        target="_blank"
+                        rel="noopener"
+                        >Lakeside Lodge Restaurant and Bar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.pondslodge.com/menus/"
+                        target="_blank"
+                        rel="noopener"
+                        >Pond's Lodge Restaurant</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="qa-item"
+            itemscope
+            itemprop="mainEntity"
+            itemtype="https://schema.org/Question"
+          >
+            <h2 itemprop="name">Where are the nearest fly shops?</h2>
+            <div
+              itemscope
+              itemprop="acceptedAnswer"
+              itemtype="https://schema.org/Answer"
+            >
+              <div itemprop="text">
+                <div class="table-scroll">
+                  <table class="qa-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Fly shop</th>
+                        <th scope="col">Town</th>
+                        <th scope="col">Phone</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a
+                            href="https://trroutfitters.com/ashton-fly-shop/"
+                            target="_blank"
+                            rel="noopener"
+                            >TRR Outfitters Fly Shop</a
+                          >
+                        </td>
+                        <td>Ashton</td>
+                        <td><a href="tel:+12086523008">208-652-3008</a></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            href="https://trroutfitters.com/island-park-fly-shop/"
+                            target="_blank"
+                            rel="noopener"
+                            >TRR Outfitters Fly Shop</a
+                          >
+                        </td>
+                        <td>Island Park</td>
+                        <td><a href="tel:+12085587501">208-558-7501</a></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            href="https://trouthunt.com/fishing/"
+                            target="_blank"
+                            rel="noopener"
+                            >TroutHunter</a
+                          >
+                        </td>
+                        <td>Island Park</td>
+                        <td><a href="tel:+12085588006">208-558-8006</a></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            href="https://henrysforkanglers.com/"
+                            target="_blank"
+                            rel="noopener"
+                            >Henry's Fork Anglers</a
+                          >
+                        </td>
+                        <td>Island Park</td>
+                        <td><a href="tel:+12085587525">208-558-7525</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
         <div class="map-section">
           <h2>Find Us</h2>
           <iframe
-            src="https://www.google.com/maps?q=3617+Fishermans+Drive,+Ashton,+ID+83420&output=embed"
-            width="100%"
+            src="https://www.google.com/maps?q=3617+Fishermans+Drive,+Ashton,+ID+83420&amp;output=embed"
             height="300"
-            style="border: 0"
-            allowfullscreen=""
+            allowfullscreen
             loading="lazy"
-            title="Google Maps showing The River Run Cabin location"
+            title="Google Map showing The River Run Cabin at 3617 Fishermans Drive, Ashton, Idaho"
           ></iframe>
         </div>
       </section>
@@ -210,7 +528,6 @@
         </span>
       </div>
     </footer>
-    <script src="../assets/js/qa.js"></script>
-    <script src="../assets/js/nav.js"></script>
+    <script src="/assets/js/nav.js"></script>
   </body>
 </html>

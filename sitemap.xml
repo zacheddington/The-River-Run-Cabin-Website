@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://theriverruncabin.com/</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://www.theriverruncabin.com/</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
-    <loc>https://theriverruncabin.com/area/</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.theriverruncabin.com/area/</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
-    <loc>https://theriverruncabin.com/qa/</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.theriverruncabin.com/qa/</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
-    <loc>https://theriverruncabin.com/contact/</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.theriverruncabin.com/contact/</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
 </urlset>
